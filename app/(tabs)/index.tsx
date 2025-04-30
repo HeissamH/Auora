@@ -17,10 +17,15 @@ export default function Index() {
 
 <ScrollView className="flex-1 px-7" showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 10, minHeight: "100%" }}>
 <Image source={icons.logo} className="w-12 h-10 mt-20 mb-9 mx-auto"/> 
+<Text className="text-white text-3xl font-bold text-center mt-1 ml-2 mr-7 mb-5">Auora</Text>
+ 
+ 
+
 <SearchBar
        placeholder="Search Movies"
        onPress={() => router.push("/search")}
                 />
+                
 </ScrollView>
     </View>
   );
