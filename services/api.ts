@@ -26,6 +26,28 @@ export const fetchMovies = async ({query}: {query: string}) => {
   return data.results;
 }
 
+export const testAPI = async () => {
+  try {
+    // Test discover movies (popular movies)
+    console.log('Testing discover movies...');
+    const popularMovies = await fetchMovies({ query: '' });
+    console.log('Popular movies found:', popularMovies.length);
+
+    // Test search movies
+    console.log('\nTesting search movies...');
+    const searchResults = await fetchMovies({ query: 'Avatar' });
+    console.log('Search results found:', searchResults.length);
+
+    return { success: true, message: 'API tests completed successfully' };
+  } catch (error) {
+    console.error('API Test Failed:', error);
+    return { success: false, message: error.message };
+  }
+}
+
+// You can test the API by calling:
+// testAPI().then(result => console.log(result));
+
 /*const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
 const options = {
   method: 'GET',
