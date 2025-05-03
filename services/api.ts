@@ -41,7 +41,7 @@ export const testAPI = async () => {
     return { success: true, message: 'API tests completed successfully' };
   } catch (error) {
     console.error('API Test Failed:', error);
-    return { success: false, message: error.message };
+    return { success: false, message: error instanceof Error ? error.message : 'An unknown error occurred' };
   }
 }
 

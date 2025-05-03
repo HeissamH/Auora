@@ -24,7 +24,13 @@ export default function Index() {
         </Text>
         {moviesLoading ? (
           <ActivityIndicator size="large" color="#fff" className="mt-10" />
-        )  : (
+        )  : 
+          moviesError ? (
+          <Text className="text-red-500 text-center mt-5">
+           Error: {moviesError.message | | "Failed to load movies"}
+          )
+        
+        (
           <View className="flex-1 mt-5">
             <SearchBar
               placeholder="Search for movies"

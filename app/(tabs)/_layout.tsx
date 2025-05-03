@@ -11,12 +11,12 @@ if (focused) {
 return (
 <ImageBackground 
                source={images.highlight}
-               className="flex flex-row w-full flex-1 min-w-[126px] min-h-16 mt-6 justify-center items-center rounded-ful overflow-hidden"
-           >
+               className="flex flex-row w-full flex-1 min-w-[126px] min-h-16 mt-6 justify-center items-center rounded-ful overflow-hidden">
+           
                <Image source={icon}
                tintColor="#151312" className ="size-5"/>
                <Text className="text-secondary text-base font-semibold ml-2">{title}</Text>
-           </ImageBackground> 
+</ImageBackground> 
 )}
 
 return (
